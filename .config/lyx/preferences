@@ -1,0 +1,137 @@
+# LyX 2.4.2.1 generated this file. If you want to make your own
+# modifications you should do them from inside LyX and save.
+
+Format 38
+
+\bind_file "/Users/giladticher/.dotfiles/.config/lyx/bind/mybind.bind"
+
+#
+# MISC SECTION ######################################
+#
+
+# The time interval between auto-saves in seconds.
+\autosave 180
+\kbmap true
+\kbmap_primary "american"
+\kbmap_secondary "/Users/giladticher/.dotfiles/.config/lyx/kbd/hebrew_arkn.kmap"
+\user_name "Gilad Ticher"
+\user_email ""
+\user_initials ""
+\preview no_math
+
+#
+# SCREEN & FONTS SECTION ############################
+#
+
+\screen_zoom 175
+\cursor_follows_scrollbar true
+\scroll_below_document true
+\mac_like_cursor_movement false
+\screen_font_roman ".AppleSystemUIFont"
+\screen_font_typewriter "Corsiva Hebrew"
+\screen_font_sizes 5 7 8 9 10 12 14.4 17.26 20.74 24.88
+\forward_search_pdf "/Applications/sioyek.app/Contents/MacOS/sioyek --inverse-search \"/Applications/LyX.app/Contents/MacOS/lyxeditor %1 %2\" --forward-search-file $$f --forward-search-line $$n"
+
+#
+# COLOR SECTION ###################################
+#
+
+\set_color "background" "#faf0e6" "#dfd78e"
+\set_color "bottomarea" "#666666" "#666666"
+\set_color "buttonbg" "#060606" "#060606"
+
+#
+# PRINTER SECTION ###################################
+#
+
+
+#
+# TEX SECTION #######################################
+#
+
+
+#
+# FILE SECTION ######################################
+#
+
+\document_path "/Users/giladticher/Library/CloudStorage/GoogleDrive-gilad.ticher@gmail.com/My Drive/Documents/LyX"
+\completion_inline_text true
+\autocorrection_math true
+\completion_popup_text true
+\backupdir_path "/Users/giladticher/Library/CloudStorage/GoogleDrive-gilad.ticher@gmail.com/My Drive/Documents/LyX/backup"
+
+#
+# PLAIN TEXT EXPORT SECTION ##############################
+#
+
+
+#
+# SPELLCHECKER SECTION ##############################
+#
+
+
+#
+# LANGUAGE SUPPORT SECTION ##########################
+#
+
+\spellcheck_continuously false
+\visual_cursor true
+\language_custom_package ""
+\mark_foreign_language false
+
+#
+# 2nd MISC SUPPORT SECTION ##########################
+#
+
+
+#
+# FORMATS SECTION ##########################
+#
+
+\format "dia" "dia" "DIA" "" "auto" "auto" "vector,zipped=native" "application/x-dia-diagram"
+\format "docbook-xml" "xml" "DocBook (XML)" "" "" "xed" "document,menu=export" "application/docbook+xml"
+\format "dvi" "dvi" "DVI" "D" "xdvi" "" "document,vector,menu=export" "application/x-dvi"
+\format "dvi3" "dvi" "DVI (LuaTeX)" "V" "xdvi" "" "document,vector,menu=export" ""
+\format "fen" "fen" "FEN" "" "auto" "auto" "" ""
+\format "fig" "fig" "FIG" "" "auto" "auto" "vector" "application/x-xfig"
+\format "gnumeric" "gnumeric" "Gnumeric spreadsheet" "" "" "auto" "document" "application/x-gnumeric"
+\format "agr" "agr" "Grace" "" "auto" "auto" "vector" ""
+\format "dot" "dot" "Graphviz Dot" "" "" "xed" "vector" "text/vnd.graphviz"
+\format "latexclipboard" "tex" "LaTeX (clipboard)" "" "" "xed" "" ""
+\format "dviluatex" "tex" "LaTeX (dviluatex)" "" "" "xed" "document,menu=export" ""
+\format "luatex" "tex" "LaTeX (LuaTeX)" "" "" "xed" "document,menu=export" ""
+\format "pdflatex" "tex" "LaTeX (pdflatex)" "" "" "xed" "document,menu=export" ""
+\format "latex" "tex" "LaTeX (plain)" "L" "" "xed" "document,menu=export" "text/x-tex"
+\format "platex" "tex" "LaTeX (pLaTeX)" "" "" "xed" "document,menu=export" ""
+\format "xetex" "tex" "LaTeX (XeTeX)" "" "" "xed" "document,menu=export" ""
+\format "lilypond-book" "lytex" "LilyPond book (LaTeX)" "" "" "xed" "document,menu=export" ""
+\format "lilypond-book-ja" "lytex" "LilyPond book (pLaTeX)" "" "" "xed" "document,menu=export" ""
+\format "lilypond" "ly" "LilyPond music" "" "" "xed" "vector" "text/x-lilypond"
+\format "markdown" "md" "Markdown" "" "" "" "document" ""
+\format "noteedit" "not" "Noteedit" "" "auto" "auto" "vector" ""
+\format "odg" "odg, sxd" "OpenDocument drawing" "" "auto" "auto" "vector,zipped=native" "application/vnd.oasis.opendocument.graphics"
+\format "text" "txt" "Plain text" "a" "" "xed" "document,menu=export" "text/plain"
+\format "text4" "txt" "Plain text (catdvi)" "" "" "xed" "document" ""
+\format "text3" "txt" "Plain text (ps2ascii)" "" "" "xed" "document" ""
+\format "text2" "txt" "Plain text (pstotext)" "" "" "xed" "document" ""
+\format "textparagraph" "txt" "Plain Text, Join Lines" "" "" "xed" "document" ""
+\format "r" "R" "R/S code" "" "" "xed" "document,menu=export" ""
+\format "knitr-ja" "Rnw" "Rnw (knitr, Japanese)" "" "" "xed" "document,menu=export" ""
+\format "knitr" "Rnw" "Rnw (knitr)" "" "" "xed" "document,menu=export" ""
+\format "sweave" "Rnw" "Sweave" "S" "" "xed" "document,menu=export" ""
+\format "sweave-ja" "Rnw" "Sweave (Japanese)" "S" "" "xed" "document,menu=export" ""
+\format "xpm" "xpm" "XPM" "" "auto" "auto" "" "image/x-xpixmap"
+
+#
+# CONVERTERS SECTION ##########################
+#
+
+\converter "latex" "lyx" "/Applications/LyX.app/Contents/MacOS/tex2lyx -f $$i $$o" ""
+\converter "lyx" "markdown" "pandoc  --wrap=none -f latex -t markdown -o $$o $$i" ""
+\converter "markdown" "latex" "pandoc -s -f markdown -t latex -o $$o $$i" ""
+\converter "latex" "rtf" "" ""
+
+#
+# COPIERS SECTION ##########################
+#
+

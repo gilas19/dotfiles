@@ -1,0 +1,12 @@
+#!/usr/bin/env zsh
+# created by gilad ticher
+
+setup_sioyek() {
+    echo "Setting up Sioyek..."
+    if command -v sioyek &>/dev/null; then
+        ln -sf $HOME/.config/sioyek/prefs_user.config ~/Applications/Sioyek.app/Contents/MacOS/prefs_user.config
+        echo "Finished setting up Sioyek."
+    else
+        echo "Sioyek not installed."
+    fi
+}

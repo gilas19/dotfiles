@@ -1,0 +1,19 @@
+#!/usr/bin/env zsh
+# created by gilad ticher
+
+setup_calibre() {
+    echo "Setting up Calibre..."
+    if command -v ./Applications/calibre.app/Contents/MacOS/calibre-customize &>/dev/null; then
+        cd $HOME/.tmp
+        unzip $HOME/.config/calibre/DeDRM_tools_6.8.0.zip
+        cd DeDRM-tools-v10.0.3
+        ./Applications/calibre.app/Contents/MacOS/calibre-customize -a DeDRM_plugin.zip
+        ./Applications/calibre.app/Contents/MacOS/calibre-customize --enable-plugins=DeDRM_tools
+        cd ..
+        rm -rf DeDRM-tools-v10.0.3
+        cd ..
+        echo "Finished setting up Calibre."
+    else
+        echo "Calibre not installed."
+    fi
+}

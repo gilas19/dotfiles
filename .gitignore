@@ -1,0 +1,13 @@
+.DS_Store
+*.log
+backup/
+.cache/
+.tmp/
+.zsh_sessions/
+.zsh_history
+*.zwc
+*.zwc.old
+
+# Python
+__pycache__/
+.idea/

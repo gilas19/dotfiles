@@ -1,0 +1,25 @@
+#!/usr/bin/env zsh
+# created by gilad ticher
+
+setup_lyx() {
+    echo "Setting up LyX..."
+    if [ -d ~/Library/Application\ Support/LyX-2.3 ]; then
+        # Install Culmus fonts
+        cd .tmp
+        tar -xvf $HOME/.config/lyx/culmus-0.133.tar.gz
+        cd culmus-0.133
+        cp -a . /Library/Fonts/
+        cd ..
+        rm -rf culmus-0.133
+        cd ..
+
+        # Create symlinks for LyX user preferences
+        ln -sf "$HOME/.config/lyx/preferences" "$HOME/Library/Application Support/LyX-2.3/preferences"
+        ln -sf "$HOME/.config/lyx/templates/defaults.lyx" "$HOME/Library/Application Support/LyX-2.3/templates/defaults.lyx"
+        ln -sf "$HOME/.config/lyx/bind/user.bind" "$HOME/Library/Application Support/LyX-2.3/bind/user.bind"
+        ln -sf "$HOME.config/lyx/kbd/hebrew_arkn.kbd" "$HOME/Library/Application Support/LyX-2.3/kbd/hebrew_arkn.kbd)"
+        echo "Finished setting up LyX."
+    else
+        echo "LyX not installed."
+    fi
+}

@@ -1,0 +1,26 @@
+#!/usr/bin/env zsh
+# created by gilad ticher
+
+# Get the current date and time
+NOW=$(date +"%Y-%m-%d %H:%M:%S")
+
+# Message for your commit
+COMMIT_MESSAGE="Automated commit on $NOW"
+
+# Pull changes from remote (add error handling)
+git pull origin main || { 
+    echo "Error pulling from remote. Check your connection and branch name."
+    exit 1  # Exit the script if there's a problem
+}
+
+# Add all changes 
+git add .
+
+# Commit with the message
+git commit -m "$COMMIT_MESSAGE"
+
+# Push to remote repository (add error handling)
+git push origin main || {
+    echo "Error pushing to remote. Check your connection and credentials."
+    exit 1  # Exit if there's a problem
+}

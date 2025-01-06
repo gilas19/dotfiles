@@ -1,0 +1,70 @@
+#
+# Hebrew keyboard definition for LyX
+# Support SI-1452-2 (partially)
+# Level 1 - None
+# Level 2 - Shift
+# 
+# author Gilad Ticher (gilad.ticher@mail.huji.ac.il)
+#
+
+# Row B
+# Level 1
+\kmap z ז
+\kmap x ס
+\kmap c ב
+\kmap v ה
+\kmap b נ
+\kmap n מ
+\kmap m צ
+# Level 2
+\kmap < >
+\kmap > <
+\kmap X ֶ	# Segol
+\kmap C ֱ	# Hataf segol
+\kmap M ֵ	# Tsere
+# Row C
+# Level 1
+\kmap a ש
+\kmap s ד
+\kmap d ג
+\kmap f כ
+\kmap g ע
+\kmap h י
+\kmap j ח
+\kmap k ל
+\kmap l ך
+\kmap ; ף
+# Level 2
+\kmap A ְ	# Sheva
+\kmap S ּ   # Dagesh (= Shuruq)
+\kmap F ֿ   # Rafe
+\kmap J ִ	# Hiriq
+# Row D
+# Level 1
+\kmap q ץ
+\kmap w ן
+\kmap e ק
+\kmap r ר
+\kmap t א
+\kmap y ט
+\kmap u ו
+\kmap i ת
+\kmap o ם
+\kmap p פ
+\kmap [ ]
+\kmap ] [
+# Level 2
+\kmap { }
+\kmap } {
+\kmap W ׂ	# Shin dot
+\kmap Q ׁ	# Sin dot
+\kmap E ָ	# Qamats
+\kmap R ֳ	# Hataf qamats
+\kmap Y ֻ 	# Qubuts
+\kmap U ֹ	# Holam
+\kmap I ֲ	# Hataf patah
+\kmap P ַ	# Patah
+# Row E
+# Level 1
+\kmap ` ;
+# Level 2

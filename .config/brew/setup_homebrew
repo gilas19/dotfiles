@@ -1,0 +1,12 @@
+#!/usr/bin/env zsh
+# created by gilad ticher
+
+# install homebrew packages
+install_homebrew_packages() {
+    echo "Installing Homebrew packages..."
+    if brew bundle --file=$HOME/.config/brew/Brewfile; then
+        echo "Finished installing Homebrew packages."
+    else
+        echo "Failed to install Homebrew packages."
+    fi
+}

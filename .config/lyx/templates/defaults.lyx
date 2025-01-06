@@ -1,0 +1,168 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties false
+\origin unavailable
+\textclass article
+\begin_preamble
+\usepackage{tikz}
+
+% Convert the QED Symbol at the end of proofs to a solid black square (credit: Yakir Oz):
+\usepackage{amssymb}
+\renewcommand{\qedsymbol}{$\blacksquare$}
+
+%fix text boxex
+\renewcommand{\text}[1]{\mbox{#1}}
+
+% Empty word symbol
+\newcommand\vartextvisiblespace[1][1em]{ \makebox[#1]{
+	\kern.1em
+	\vrule height.7ex
+	\hrulefill
+	\vrule height.7ex
+	\kern.1em
+}}
+
+% Correct numbering
+\renewcommand\thesection{\RL{\arabic{section}}}
+\renewcommand\thesubsection{\RL{\arabic{subsection}}}
+\renewcommand{\labelenumii}{\arabic{enumii}.\arabic{enumi}}
+\renewcommand{\labelenumiii}{\arabic{enumiii}.\arabic{enumii}.\arabic{enumi}}
+\renewcommand{\labelenumiv}{\arabic{enumiv}.\arabic{enumiii}.\arabic{enumii}.\arabic{enumi}}
+
+
+
+% Packages
+%\usepackage{autobreak}
+%\usepackage[T1]{fontenc}
+%\usepackage{relsize}
+%\usepackage{fontspec}
+
+% Set vertical space before and after dislpay equations to be longer for better redability:
+%\AtBeginDocument{\setlength\abovedisplayskip{12pt}}
+%\AtBeginDocument{\setlength\belowdisplayskip{12pt}}
+%\AtBeginDocument{\setlength\belowdisplayshortskip{12pt}}
+%\AtBeginDocument{\setlength\belowdisplayshortskip{12pt}}
+
+% Convert the Lyx colors into more pleasent colors:
+%\usepackage{xcolor}
+%\definecolor{blue}{RGB}{12,97,197}
+%\definecolor{green}{RGB}{0,128,40}
+%\definecolor{red}{RGB}{235,16,16}
+%\definecolor{brown}{RGB}{154,58,0}
+%\definecolor{orange}{RGB}{231,135,26}
+%\definecolor{purple}{RGB}{94,53,177}
+
+% Set space between words to be wider:
+%\spaceskip=1.3\fontdimen2\font plus 1\fontdimen3\font minus 1.5\fontdimen4\font
+
+% Make the layout more similar to Hebrew Article, which I am more used to:
+%\renewcommand*{\@seccntformat}[1]{\hspace{0.5cm}\csname the#1\endcsname\hspace{0.5cm}} 
+%\usepackage{titlesec}
+%\titleformat{\section}{\fontsize{20}{20}\bfseries}{\thesection}{10pt}{}
+%\titleformat{\subsection}{\fontsize{15}{15}\bfseries}{\thesubsection}{10pt}{}
+%\titleformat{\subsubsection}{\bfseries}{\thesubsubsection}{10pt}{}
+
+% Correct the reversed parentheses in labels:
+%\usepackage{polyglossia}
+%\setdefaultlanguage{hebrew}
+%\setotherlanguage{english}
+%\makeatletter
+%	\def\maketag@@@#1{\hbox{\m@th\normalfont\LRE{#1}}}
+%	\def\tagform@#1{\maketag@@@{(\ignorespaces#1\unskip)}}
+%\makeatother
+\end_preamble
+\use_default_options false
+\begin_modules
+theorems-ams
+algorithm2e
+\end_modules
+\maintain_unincluded_children false
+\language hebrew
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "David CLM"
+\font_sans "default" "Simple CLM"
+\font_typewriter "default" "Miriam CLM"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts true
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement h
+\paperfontsize default
+\spacing onehalf
+\use_hyperref true
+\pdf_bookmarks true
+\pdf_bookmarksnumbered true
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder true
+\pdf_colorlinks false
+\pdf_backref false
+\pdf_pdfusetitle true
+\papersize a4paper
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine natbib
+\cite_engine_type authoryear
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth -1
+\tocdepth 2
+\paragraph_separation indent
+\paragraph_indentation 0pt
+\is_math_indent 0
+\math_numbering_side right
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\bullet 0 2 5 -1
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+
+\end_layout
+
+\end_body
+\end_document
