@@ -1,0 +1,21 @@
+#!/usr/bin/env zsh
+# created by gilad ticher
+
+CONFIG_DIR=$HOME/.config
+SETUP_FILES=(
+    brew
+    calibre
+    code
+    lyx
+    macos
+    sioyek
+)
+
+for file in $SETUP_FILES; do
+    if [ -f $CONFIG_DIR/$file/setup_$file ]; then
+        echo "Running setup_$file..."
+        source $CONFIG_DIR/$file/setup_$file
+    else
+        echo "setup_$file not found."
+    fi
+done

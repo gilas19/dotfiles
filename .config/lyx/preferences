@@ -3,7 +3,7 @@
 
 Format 38
 
-\bind_file "/Users/giladticher/.dotfiles/.config/lyx/bind/mybind.bind"
+\bind_file "/Users/giladticher/.config/lyx/bind/mybind.bind"
 
 #
 # MISC SECTION ######################################
@@ -13,7 +13,7 @@ Format 38
 \autosave 180
 \kbmap true
 \kbmap_primary "american"
-\kbmap_secondary "/Users/giladticher/.dotfiles/.config/lyx/kbd/hebrew_arkn.kmap"
+\kbmap_secondary "/Users/giladticher/.config/lyx/kbd/hebrew_arkn.kmap"
 \user_name "Gilad Ticher"
 \user_email ""
 \user_initials ""

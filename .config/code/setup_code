@@ -1,12 +1,10 @@
 #!/usr/bin/env zsh
 # created by gilad ticher
 
-setup_code() {
-    echo "Setting up Visual Studio Code..."
-    if command -v code &>/dev/null; then
-        cp -f "$HOME/.config/code/Open in Visual Studio Code.workflow" "/Library/Services/Open in Visual Studio Code.workflow"
-        echo "Finished setting up Visual Studio Code."
-    else
-        echo "Visual Studio Code not installed."
-    fi
-}
+echo "Setting up Visual Studio Code..."
+if command -v code &>/dev/null; then
+    cp -f "$HOME/.config/code/Open in Visual Studio Code.workflow" "/Library/Services/Open in Visual Studio Code.workflow"
+    echo "Finished setting up Visual Studio Code."
+else
+    echo "Visual Studio Code not installed."
+fi
