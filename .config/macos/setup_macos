@@ -8,14 +8,14 @@ echo "Setting macOS defaults..."
 osascript -e 'tell application "System Preferences" to quit'
 
 # Always show scrollbars
-defaults write NSGlobalDomain AppleShowScrollBars -string "Always"
+# defaults write NSGlobalDomain AppleShowScrollBars -string "Always"
 # Possible values: `WhenScrolling`, `Automatic` and `Always`
 
 # Save screenshots to the desktop
-defaults write com.apple.screencapture location -string "${HOME}/Desktop"
+# defaults write com.apple.screencapture location -string "${HOME}/Desktop"
 
 # Save screenshots in PNG format (other options: BMP, GIF, JPG, PDF, TIFF)
-defaults write com.apple.screencapture type -string "png"
+# defaults write com.apple.screencapture type -string "png"
 
 # Finder: show hidden files by default
 defaults write com.apple.finder AppleShowAllFiles -bool true
@@ -35,7 +35,7 @@ defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
 defaults write com.apple.finder FXPreferredViewStyle -string "clmv"
 
 # Hide desktop items
-defaults write com.apple.finder "CreateDesktop" -bool "false"
+# defaults write com.apple.finder "CreateDesktop" -bool "false"
 
 # Don’t show recent applications in Dock
 defaults write com.apple.dock show-recents -bool false
@@ -44,4 +44,10 @@ defaults write com.apple.dock show-recents -bool false
 defaults write com.apple.mail DisableInlineAttachmentViewing -bool true
 
 # Set sidebar icon size to medium
-defaults write NSGlobalDomain NSTableViewDefaultSizeMode -int 2
+# defaults write NSGlobalDomain NSTableViewDefaultSizeMode -int 2
+
+defaults write com.apple.finder "ShowRemovableMediaOnDesktop" -bool "false"
+defaults write com.apple.finder "ShowExternalHardDrivesOnDesktop" -bool "false"
+
+defaults write com.apple.dock "show-recents" -bool "false"
+defaults write com.apple.dock "autohide" -bool "true"

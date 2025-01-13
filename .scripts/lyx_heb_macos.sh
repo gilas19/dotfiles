@@ -3,39 +3,65 @@
 
 # This script installs LyX with hebrew Fonts on macOS using Homebrew.
 # It also creates a preferences file for LyX settings.
-# Lyx setting works only with LyX version 2.3 and above.
+# Lyx setting works only with LyX version 2.4 and above.
+
+# Exit on error
+set -e
 
 # Check if Homebrew is installed
 if ! command -v brew &>/dev/null; then
     echo "Install Homebrew First!"
+    exit 1
 else
     echo "Homebrew is already installed."
 fi
 
 # Function to install LyX without preferences and settings
-Install() {
-    # Install MacTeX and LyX using Homebrew
-    brew install --cask mactex
-    brew install --cask lyx
+install() {
+    echo "Installing MacTeX and LyX..."
+    brew install --cask mactex || {
+        echo "Failed to install MacTeX"
+        exit 1
+    }
+    brew install --cask lyx || {
+        echo "Failed to install LyX"
+        exit 1
+    }
 
-    # Install Culmus fonts
-    mkdir tex_temp
-    cd tex_temp
-    curl -O https://sourceforge.net/projects/culmus/files/culmus/0.133/culmus-0.133.tar.gz
-    tar -xvf culmus-0.133.tar.gz
-    cd culmus-0.133         # Change into the extracted directory
-    cp -a . /Library/Fonts/ # Copy all the fonts into the system fonts directory
-    cd ../..
-    rm -rf tex_temp
+    echo "Installing Culmus fonts..."
+    local temp_dir=$(mktemp -d)
+    cd "$temp_dir"
+
+    if ! curl -L -O https://sourceforge.net/projects/culmus/files/culmus/0.133/culmus-0.133.tar.gz; then
+        echo "Failed to download Culmus fonts"
+        rm -rf "$temp_dir"
+        exit 1
+    fi
+
+    tar -xf culmus-0.133.tar.gz
+    cd culmus-0.133
+    cp -a . /Library/Fonts/
+    cd ..
+    rm -rf "$temp_dir"
+
+    echo "Fonts installed successfully"
 }
 
 # Function to install LyX with preferences and settings
 install_settings() {
-    # Create preferences file for LyX settings
-    cat <<EOF >~/Library/Application\ Support/LyX-2.3/preferences
-# LyX 2.3.7 generated this file. If you want to make your own
-# modifications you should do them from inside LyX and save.
+    # Detect LyX version and set paths accordingly
+    local lyx_version="2.4" # Default version
+    local lyx_support_dir="$HOME/Library/Application Support/LyX-$lyx_version"
 
+    # Create necessary directories
+    mkdir -p "$lyx_support_dir/templates" || {
+        echo "Failed to create LyX directories"
+        exit 1
+    }
+
+    # Create preferences file
+    echo "Creating preferences file..."
+    cat >"$lyx_support_dir/preferences" <<'EOF'
 Format 24
 
 
@@ -112,12 +138,8 @@ Format 24
 #
 EOF
 
-    echo "File 'preferences' generated successfully!"
-
-    # Create defaults.lyx file for LyX settings
-    mkdir -p ~/Library/Application\ Support/LyX-2.3/templates
-    cat <<EOF >~/Library/Application\ Support/LyX-2.3/templates/defaults.lyx
-#LyX 2.3 created this file. For more info see http://www.lyx.org/
+    echo "Creating default template..."
+    cat >"$lyx_support_dir/templates/defaults.lyx" <<'EOF'
 \\lyxformat 544
 \\begin_document
 \\begin_header
@@ -205,17 +227,22 @@ EOF
 \\end_document
 EOF
 
-    echo "File 'defaults.lyx' generated successfully!"
+    echo "Settings installed successfully!"
 }
 
-# Check command-line argument
-if [ "$1" == "--only-settings" ]; then
-    install_settings
-elif [ "$1" == "--with-settings" ]; then
-    Install
-    install_settings
-elif [ "$1" == "--without-settings" ]; then
-    Install
-else
-    echo "Usage: $0 [--with-settings | --without-settings | --only-settings]"
-fi
+# Main script execution
+case "$1" in 
+    --only-settings)
+        install_settings
+        ;;
+    --with-settings)
+        install
+        install_settings
+        ;;
+    --without-settings)
+        install
+        ;;
+    *)
+        echo "Usage: $0 [--with-settings | --without-settings | --only-settings]"
+        ;;
+esac

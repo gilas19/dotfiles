@@ -8,6 +8,7 @@ brew "baobab"
 brew "cmake"
 brew "tesseract"
 brew "ffmpeg"
+brew "gh"
 brew "git-lfs"
 brew "mas"
 brew "openjdk"
@@ -15,6 +16,7 @@ brew "pandoc"
 brew "python-tk@3.12"
 brew "qpdf"
 brew "tailscale"
+brew "tmux"
 brew "tree"
 brew "yadm"
 cask "appcleaner"
@@ -22,6 +24,7 @@ cask "arc"
 cask "calibre", args: { appdir: "/Applications" }
 cask "claude"
 cask "docker", args: { appdir: "/Applications" }
+cask "firefox"
 cask "google-drive", args: { appdir: "/Applications" }
 cask "hazeover"
 cask "jetbrains-toolbox", args: { appdir: "/Applications" }
@@ -32,7 +35,6 @@ cask "mactex", args: { appdir: "/Applications" }
 cask "mathpix-snipping-tool", args: { appdir: "/Applications" }
 cask "miniconda", args: { appdir: "/Applications" }
 cask "onyx"
-cask "orion"
 cask "qbittorrent", args: { appdir: "/Applications" }
 cask "raspberry-pi-imager", args: { appdir: "/Applications" }
 cask "sioyek", args: { appdir: "/Applications" }
@@ -42,18 +44,19 @@ cask "time-out", args: { appdir: "/Applications" }
 cask "utm"
 cask "visual-studio-code"
 cask "vlc", args: { appdir: "/Applications" }
+cask "warp"
 cask "zoom", args: { appdir: "/Applications" }
+mas "Flow", id: 1423210932
 mas "Microsoft PowerPoint", id: 462062816
 mas "Microsoft Word", id: 462054704
 mas "one sec", id: 1532875441
 mas "Sorted", id: 1306893526
 mas "Tailscale", id: 1475387142
-mas "TickTick", id: 966085870
-mas "Toggl Track", id: 1291898086
 vscode "asciidoctor.asciidoctor-vscode"
 vscode "bierner.markdown-mermaid"
 vscode "davidanson.vscode-markdownlint"
 vscode "eamodio.gitlens"
+vscode "foxundermoon.shell-format"
 vscode "github.copilot"
 vscode "github.copilot-chat"
 vscode "gruntfuggly.todo-tree"

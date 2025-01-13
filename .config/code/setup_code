@@ -4,6 +4,7 @@
 echo "Setting up Visual Studio Code..."
 if command -v code &>/dev/null; then
     cp -f "$HOME/.config/code/Open in Visual Studio Code.workflow" "/Library/Services/Open in Visual Studio Code.workflow"
+    ln -sf "$HOME/.config/code/settings.json" "$HOME/Library/Application Support/Code/User/settings.json"
     echo "Finished setting up Visual Studio Code."
 else
     echo "Visual Studio Code not installed."
