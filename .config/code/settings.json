@@ -1,0 +1,21 @@
+{
+    "workbench.sideBar.location": "right",
+    "github.copilot.enable": {
+        "*": true,
+        "plaintext": true,
+        "markdown": true,
+        "scminput": false
+    },
+    "files.associations": {
+        "*.strings": "plist"
+    },
+    "workbench.editorAssociations": {
+        "*.copilotmd": "vscode.markdown.preview.editor",
+        "*.plist": "default"
+    },
+    "terminal.integrated.inheritEnv": false,
+    "hediet.vscode-drawio.resizeImages": null,
+    "files.exclude": {
+        "**/.git": false
+    },
+}

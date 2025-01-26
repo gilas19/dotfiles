@@ -15,6 +15,7 @@ for file in $SETUP_FILES; do
     if [ -f $CONFIG_DIR/$file/setup_$file ]; then
         echo "Running setup_$file..."
         source $CONFIG_DIR/$file/setup_$file
+        # chmod +x $CONFIG_DIR/$file/setup_$file
     else
         echo "setup_$file not found."
     fi
