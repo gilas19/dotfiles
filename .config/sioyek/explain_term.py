@@ -4,7 +4,7 @@ import tkinter as tk
 from tkinter import ttk
 
 if __name__ == "__main__":
-    # client = InferenceClient(api_key="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")
+    # client = InferenceClient(api_key="***")
     input = sys.argv[1]
 
     messages = [{"role": "user", "content": f"explain {input}"}]
