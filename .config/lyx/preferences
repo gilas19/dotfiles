@@ -3,7 +3,7 @@
 
 Format 38
 
-\bind_file "/Users/giladticher/.config/lyx/bind/mybind.bind"
+\bind_file "/Users/***/.config/lyx/bind/mybind.bind"
 
 #
 # MISC SECTION ######################################
@@ -54,11 +54,11 @@ Format 38
 # FILE SECTION ######################################
 #
 
-\document_path "/Users/giladticher/Library/CloudStorage/GoogleDrive-gilad.ticher@gmail.com/My Drive/Documents/LyX"
+\document_path "/Users/***/Library/CloudStorage/GoogleDrive-***/My Drive/Documents/LyX"
 \completion_inline_text true
 \autocorrection_math true
 \completion_popup_text true
-\backupdir_path "/Users/giladticher/Library/CloudStorage/GoogleDrive-gilad.ticher@gmail.com/My Drive/Documents/LyX/backup"
+\backupdir_path "/Users/***/Library/CloudStorage/GoogleDrive-***/My Drive/Documents/LyX/backup"
 
 #
 # PLAIN TEXT EXPORT SECTION ##############################
